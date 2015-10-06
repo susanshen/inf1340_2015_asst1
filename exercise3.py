@@ -32,7 +32,8 @@ diagnose_car()
 #Expected Output: Display first question
 diagnose_car = raw_input('Is the car silent when you turn the key? (yes/no):')
 
-#Input: yes to question 1, display question 2
+#Input: yes
+#Expected Output: Display "Are the battery terminals corroded?"
 if diagnose_car == "yes":
     diagnose_car = raw_input('Are the battery terminals corroded? (yes/no):')
 
