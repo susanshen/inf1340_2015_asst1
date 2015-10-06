@@ -63,5 +63,8 @@ print "Amount Lakshmi had left after paying for commission:", "$", total_amount_
 #Lakshmi lost money if the amount of money left is negative
 if total_amount_left < 0:
     print "Lakshmi lost money"
+#Lakshmi made a profit if amount of money left is positive (anything other than negative)
+else:
+    print "Lakshmi made a profit"
 
 
