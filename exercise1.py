@@ -19,18 +19,18 @@ shares = 2000
 cost_per_share = 900.00
 
 #Calculate amount paid on stocks as 2000 shares multiplied by $900
-#Expected output: $1,800,000 is the amount paid on stocks
+#Expected output: $1,800,000
 stock_purchased = shares * cost_per_share
 
 #Input: 3%
 three_percent = 0.03
 
-#Calculate stockbroker's commission as 3% multiplied by $1,800,000
+#Calculate stockbroker's commission as 0.03 multiplied by $1,800,000
 #Expected Output: $54,000
 commission = three_percent * stock_purchased
 
 #Calculate the total amount Lakshmi spent as $1,800,000 multiplied by $54,000
-#Expected output: Total amount spent is $1,854,000
+#Expected output: $1,854,000
 amount_paid = stock_purchased + commission
 
 
@@ -49,7 +49,7 @@ amount_left_selling_stock = stock_sold - amount_paid
 print "Amount Lakshmi had left after selling stock:", "$", amount_left_selling_stock
 
 
-#Calculate stockbroker's commission as 3% multiplied by $1,885,500
+#Calculate stockbroker's commission as 0.03 multiplied by $1,885,500
 #Expected Output: $56,565
 commission = three_percent * stock_sold
 
