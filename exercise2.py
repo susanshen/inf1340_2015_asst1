@@ -28,38 +28,48 @@ def name_that_shape():
 
 name_that_shape()
 
-#Input:
 #Requesting users to input the number of sides in order to retrieve the corresponding shape name
+#Input: A phrase to request user's input and a text box for users to input a number
 name_that_shape = int(raw_input('Enter the number of sides of a regular polygon and we will name that shape:'))
 
 
-#Input: Triangle has 3 sides
+#Input: 3 sides
+#Expected Output: Triangle
 if name_that_shape == 3:
     print('Triangle')
-#Input: Square has 4 sides
+#Input: 4 sides
+#Expected Output: Square
 elif name_that_shape == 4:
     print('Square')
-#Input: Pentagon has 5 sides
+#Input: 5 sides
+#Expected Output: Pentagon
 elif name_that_shape == 5:
     print('Pentagon')
-#Input: Hexagon has 6 sides
+#Input: 6 sides
+#Expected Output: Hexagon
 elif name_that_shape == 6:
     print('Hexagon')
-#Input: Heptagon has 7 sides
+#Input: 7 sides
+#Expected Output: Heptagon
 elif name_that_shape == 7:
     print('Heptagon')
-#Input: Octagon has 8 sides
+#Input: 8 sides
+#Expected Output: Octagon
 elif name_that_shape == 8:
     print('Octagon')
-#Input: Nonagon has 9 sides
+#Input: 9 sides
+#Expected Output: Nonagon
 elif name_that_shape == 9:
     print('Nonagon')
-#Input: Decagon has 10 sides
+#Input: 10 sides
+#Expected Output: Decagon
 elif name_that_shape == 10:
     print('Decagon')
-#Input: Cannot name shapes that have more than 10 sides
+#Input: More than 10 sides
+#Expected Output: Error (Because this program can only name shapes that has upto 10 sides)
 elif name_that_shape > 10:
     print('Error')
-#Input: Shapes with less than 3 sides are not a regular polygon
+#Input: Less than 3 sides
+#Expected Output: Error (Because shapes with less than 3 sides are not a regular polygon)
 elif name_that_shape < 3:
     print('Error')

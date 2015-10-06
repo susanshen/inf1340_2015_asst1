@@ -26,21 +26,18 @@ def diagnose_car():
 
     """
 
-    print("The battery cables may be damaged. Replace cables and try again.")
-
 
 diagnose_car()
-#question and text box that requires users to input the answer
-#question 1
-diagnose_car1 = raw_input('Is the car silent when you turn the key? (Yes/No):')
+#Input: A question to request user's input and a text box for users to input yes or no
+#Expected Output: Display first question
+diagnose_car = raw_input('Is the car silent when you turn the key? (Yes/No):')
 
-#yes to question 1, display question 2
+#Input: yes to question 1, display question 2
 if diagnose_car == "yes":
     diagnose_car = raw_input('Are the battery terminals corroded? (Yes/No):')
-#yes to question 2
+
     if diagnose_car == "yes":
         print('Clean terminals and start again.')
-#
     elif diagnose_car == "no":
         print('Replace cables and try again.')
 
@@ -68,3 +65,7 @@ elif diagnose_car == "no":
         elif diagnose_car == "no":
             print('Engine is not getting enough fuel. Clean fuel pump.')
 
+#Input: Any input other than yes or no is invalid
+#Expected Output: Error
+else:
+    print('Error')
