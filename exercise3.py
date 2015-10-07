@@ -28,7 +28,7 @@ def diagnose_car():
 
 
 diagnose_car()
-#Input: A question to request user's input and a text box for users to input yes or no
+#Input: A question to request user's input with yes or no entry
 #Expected Output: Display first question
 diagnose_car = raw_input('Is the car silent when you turn the key? (yes/no):')
 
@@ -42,6 +42,7 @@ if diagnose_car == "yes":
     elif diagnose_car == "no":
         print('Replace cables and try again.')
 
+#Input: no to question 1
 elif diagnose_car == "no":
     diagnose_car = raw_input('Does the car make a clicking noise? (yes/no):')
 
