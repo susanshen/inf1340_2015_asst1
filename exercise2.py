@@ -13,7 +13,7 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 
-def name_that_shape():
+def name_that_shape(user_input):
     """
     For a given number of sides in a regular polygon, returns the shape name
 
@@ -24,44 +24,51 @@ def name_that_shape():
     Errors:
 
     """
-
-name_that_shape()
-
-# Code written by Deanna Wong and Shu Yun (Susan) Shen
+#Code written by Deanna Wong and Shu Yun (Susan) Shen
 
 #Requesting users to input the number of sides in order to retrieve the corresponding shape name
 #Input: A phrase to request user's input and a text box for users to input a number
-#Input limited to numbers between 3-10, any other numbers will result in an error.
+#Error: Input limited to numbers between 3-10, any other numbers will result in an error.
 
-name_that_shape = int(raw_input('Enter the number of sides of a regular polygon and we will name that shape:'))
+user_input = int(raw_input('Enter the number of sides of a regular polygon and we will name that shape:'))
 
-if name_that_shape == 3:
+#Input: 3
+#Expected Output: Triangle
+if user_input == 3:
     print('Triangle')
-
-elif name_that_shape == 4:
+#Input: 4
+#Expected Output: Square
+elif user_input == 4:
     print('Square')
-
-elif name_that_shape == 5:
+#Input: 5
+#Expected Output: Pentagon
+elif user_input == 5:
     print('Pentagon')
-
-elif name_that_shape == 6:
+#Input: 6
+#Expected Output: Hexagon
+elif user_input == 6:
     print('Hexagon')
-
-elif name_that_shape == 7:
+#Input: 7
+#Expected Output: Heptagon
+elif user_input == 7:
     print('Heptagon')
-
-elif name_that_shape == 8:
+#Input: 8
+#Expected Output: Octagon
+elif user_input == 8:
     print('Octagon')
-
-elif name_that_shape == 9:
+#Input: 9
+#Expected Output: Nonagon
+elif user_input == 9:
     print('Nonagon')
-
-elif name_that_shape == 10:
+#Input: 10
+#Expected Output: Decagon
+elif user_input == 10:
     print('Decagon')
 
-elif name_that_shape > 10:
+elif user_input > 10:
     print('Error: This program can only name shapes that have up to 10 sides')
 
-elif name_that_shape < 3:
+elif user_input < 3:
     print('Error: This is not a regular polygon')
 
+name_that_shape(user_input)
