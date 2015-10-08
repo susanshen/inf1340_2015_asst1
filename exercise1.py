@@ -12,28 +12,25 @@ __email__ = "ses@drsusansim.org"
 __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
-#Input: 2000 shares
-shares = 2000
+# Code written by Deanna Wong and Shu Yun (Susan) Shen
 
-#Input: $900 per share
+shares = 2000
 cost_per_share = 900.00
+commission_rate = 0.03
 
 #Calculate amount paid on stocks as 2000 shares multiplied by $900
 #Expected output: $1,800,000
 stock_purchased = shares * cost_per_share
 
-#Input: 3%
-commission_fee = 0.03
-
 #Calculate stockbroker's commission as 0.03 multiplied by $1,800,000
 #Expected Output: $54,000
-commission = commission_fee * stock_purchased
+commission = commission_rate * stock_purchased
 
 #Calculate the total amount Lakshmi spent as $1,800,000 multiplied by $54,000
 #Expected output: $1,854,000
 amount_paid = stock_purchased + commission
 
-#Input: $942.75 per share two weeks later
+#Input: $942.75 per share sold two weeks later
 cost_per_share = 942.75
 
 #Calculate amount of money made after selling stock as 2000 shares multiplied by $942.75
@@ -49,7 +46,7 @@ print "Amount Lakshmi had left after selling stock:", "$", amount_remaining
 
 #Calculate stockbroker's commission as 0.03 multiplied by $1,885,500
 #Expected Output: $56,565
-commission = commission_fee * stock_sold
+commission = commission_rate * stock_sold
 
 #Calculate amount remaining after paying for commission as $56,565 subtracted from $31,5000
 #Expected Output: $-25,065
