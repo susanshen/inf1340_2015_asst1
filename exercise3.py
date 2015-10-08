@@ -18,39 +18,39 @@ def diagnose_car():
     Interactively queries the user with yes/no questions to identify a
     possible issue with a car.
 
-    Inputs: y or n
+    Inputs: Y or N
 
     Expected Outputs: Display proceeding diagnosis until final solution is provided
 
     Errors: Any other entry besides y and n will result in an error
 
     Test Case:
-    #Input:y
-    #Expected Output: Display Are the battery terminals corroded? (y/n):
-    #Input:yy
+    #Input:Y
+    #Expected Output: Display Are the battery terminals corroded? (Y/N):
+    #Input:YY
     #Expected Output: Display Clean terminals and try starting again.
-    #Input:yn
+    #Input:YN
     #Expected Output: Display Replace cables and try again.
-    #Input:n
-    #Expected Output: Display Does the car make a clicking noise? (y/n):
-    #Input:ny
+    #Input:N
+    #Expected Output: Display Does the car make a clicking noise? (Y/N):
+    #Input:NY
     #Expected Output: DisplayReplace the battery
-    #Input:nn
-    #Expected Output: Display Does the car crank up but fail to start? (yes/no):
-    #Input:nny
+    #Input:NN
+    #Expected Output: Display Does the car crank up but fail to start? (Y/N):
+    #Input:NNY
     #Expected Output: Display Check spark plug connections.
-    #Input:nnn
-    #Expected Output: Display Does the engine start and then die? (y/n):
-    #Input:nnny
-    #Expected Output: Display Does your car have fuel injection? (y/n):
-    #Input:nnnyn
+    #Input:NNN
+    #Expected Output: Display Does the engine start and then die? (Y/N):
+    #Input:NNNY
+    #Expected Output: Display Does your car have fuel injection? (Y/N):
+    #Input:NNNYN
     #Expected Output: Display Check to ensure the choke is opening and closing.
-    #Input:nnnyy
+    #Input:NNNYY
     #Expected Output: Display Get it in for service.
-    #Input:nnnn
+    #Input:NNNN
     #Expected Output: Display Engine is not getting enough fuel. Clean fuel pump.
-    #Input: Anything other than y and n
-    #Expected Output: Display Error: This answer is invalid. Only answer y or n.
+    #Input: Anything other than Y and N
+    #Expected Output: Display Error: This answer is invalid. Only answer Y or N.
     """
 
 
