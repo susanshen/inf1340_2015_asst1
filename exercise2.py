@@ -13,75 +13,69 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 
-def name_that_shape(user_input):
+def name_that_shape():
     """
     For a given number of sides in a regular polygon, returns the shape name
 
-    Inputs:
+    Inputs: 3-10
 
-    Expected Outputs:
+    Expected Outputs: Corresponding shapes
 
-    Errors:
+    Errors: Input limited to numbers between 3-10, any other numbers will result in an error.
 
     """
-#Code written by Deanna Wong and Shu Yun (Susan) Shen
+    #Test Cases:
+    #Input: 3
+    #Expected Output: triangle
 
-#Requesting users to input the number of sides in order to retrieve the corresponding shape name
-#Input: A phrase to request user's input and a text box for users to input a number
-#Error: Input limited to numbers between 3-10, any other numbers will result in an error.
+    #Input: 4
+    #Expected Output: quadrilateral
 
-#Test Cases:
-#Input: 3
-#Expected Output: Triangle
+    #Input: 5
+    #Expected Output: pentagon
 
-#Input: 4
-#Expected Output: Square
+    #Input: 6
+    #Expected Output: hexagon
 
-#Input: 5
-#Expected Output: Pentagon
+    #Input: 7
+    #Expected Output: heptagon
 
-#Input: 6
-#Expected Output: Hexagon
+    #Input: 8
+    #Expected Output: octagon
 
-#Input: 7
-#Expected Output: Heptagon
+    #Input: 9
+    #Expected Output: nonagon
 
-#Input: 8
-#Expected Output: Octagon
+    #Input: 10
+    #Expected Output: decagon
 
-#Input: 9
-#Expected Output: Nonagon
+    #Input: <3
+    #Expected Output: Error: This is not a regular polygon
 
-#Input: 10
-#Expected Output: Decagon
+    #Input:>10
+    #Expected Output: Error: This is not a regular polygon
 
-#Input: <3
-#Expected Output: Error: This is not a regular polygon
+    user_input = raw_input('Enter the number of sides of a regular polygon and we will name that shape:')
 
-#Input:>10
-#Expected Output: Error: This is not a regular polygon
+    if user_input == "3":
+        print('triangle')
+    elif user_input == "4":
+        print('quadrilateral')
+    elif user_input == "5":
+        print('pentagon')
+    elif user_input == "6":
+        print('hexagon')
+    elif user_input == "7":
+        print('heptagon')
+    elif user_input == "8":
+        print('octagon')
+    elif user_input == "9":
+        print('nonagon')
+    elif user_input == "10":
+        print('decagon')
+    elif user_input > "10":
+        print('Error')
+    elif user_input < "3":
+        print('Error')
 
-user_input = int(raw_input('Enter the number of sides of a regular polygon and we will name that shape:'))
-
-if user_input == 3:
-    print('Triangle')
-elif user_input == 4:
-    print('Square')
-elif user_input == 5:
-    print('Pentagon')
-elif user_input == 6:
-    print('Hexagon')
-elif user_input == 7:
-    print('Heptagon')
-elif user_input == 8:
-    print('Octagon')
-elif user_input == 9:
-    print('Nonagon')
-elif user_input == 10:
-    print('Decagon')
-elif user_input > 10:
-    print('Error: This program can only name shapes that have up to 10 sides')
-elif user_input < 3:
-    print('Error: This is not a regular polygon')
-
-name_that_shape(user_input)
+#name_that_shape()
