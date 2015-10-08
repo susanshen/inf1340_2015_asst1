@@ -28,46 +28,45 @@ def diagnose_car():
 
 
 diagnose_car()
-#Input: A question to request user's input with yes or no entry
-#Expected Output: Display first question
-diagnose_car = raw_input('Is the car silent when you turn the key? (yes/no):')
 
-#Input: yes
-#Expected Output: Display "Are the battery terminals corroded?"
-if diagnose_car == "yes":
-    diagnose_car = raw_input('Are the battery terminals corroded? (yes/no):')
+# Code written by Deanna Wong and Shu Yun (Susan) Shen
 
-    if diagnose_car == "yes":
+#Input: A question to request user's input with y or n entry, any other entry will result in an error.
+#Expected Output: Display proceeding diagnosis until final solution is provided
+diagnose_car = raw_input('Is the car silent when you turn the key? (y/n):')
+
+if diagnose_car == "y":
+    diagnose_car = raw_input('Are the battery terminals corroded? (y/n):')
+
+    if diagnose_car == "y":
         print('Clean terminals and start again.')
-    elif diagnose_car == "no":
+    elif diagnose_car == "n":
         print('Replace cables and try again.')
 
-#Input: no to question 1
-elif diagnose_car == "no":
-    diagnose_car = raw_input('Does the car make a clicking noise? (yes/no):')
+elif diagnose_car == "n":
+    diagnose_car = raw_input('Does the car make a clicking noise? (y/n):')
 
-    if diagnose_car == "yes":
+    if diagnose_car == "y":
         print('Replace the battery')
-    elif diagnose_car == "no":
+    elif diagnose_car == "n":
         diagnose_car = raw_input('Does the car crank up but fail to start? (yes/no):')
 
-    if diagnose_car == "yes":
+    if diagnose_car == "y":
         print('Check spark plug connections.')
-    elif diagnose_car == "no":
-        diagnose_car = raw_input('Does the engine start and then die? (yes/no):')
 
-        if diagnose_car == "yes":
-            diagnose_car = raw_input('Does your car have fuel injection? (yes/no):')
+    elif diagnose_car == "n":
+        diagnose_car = raw_input('Does the engine start and then die? (y/n):')
 
-            if diagnose_car == "yes":
+        if diagnose_car == "y":
+            diagnose_car = raw_input('Does your car have fuel injection? (y/n):')
+
+            if diagnose_car == "y":
                 print('Check to ensure the choke is opening and closing.')
-            elif diagnose_car == "no":
+            elif diagnose_car == "n":
                 print('Get it in for service.')
 
-        elif diagnose_car == "no":
+        elif diagnose_car == "n":
             print('Engine is not getting enough fuel. Clean fuel pump.')
 
-#Input: Any input other than yes or no is invalid
-#Expected Output: Error
 else:
-    print('Error: This answer is invalid. Only answer yes or no.')
+    print('Error: This answer is invalid. Only answer y or n.')
