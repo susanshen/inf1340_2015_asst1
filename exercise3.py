@@ -22,7 +22,7 @@ def diagnose_car():
 
     Expected Outputs: Display proceeding diagnosis until final solution is provided
 
-    Errors: Any other entry besides y and n will result in an error
+    Errors: Any other entry besides Y and N will result in an error
 
     Test Case:
     #Input:Y
