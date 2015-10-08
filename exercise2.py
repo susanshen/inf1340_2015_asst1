@@ -27,33 +27,24 @@ def name_that_shape():
     #Test Cases:
     #Input: 3
     #Expected Output: triangle
-
     #Input: 4
     #Expected Output: quadrilateral
-
     #Input: 5
     #Expected Output: pentagon
-
     #Input: 6
     #Expected Output: hexagon
-
     #Input: 7
     #Expected Output: heptagon
-
     #Input: 8
     #Expected Output: octagon
-
     #Input: 9
     #Expected Output: nonagon
-
     #Input: 10
     #Expected Output: decagon
-
     #Input: <3
-    #Expected Output: Error: This is not a regular polygon
-
-    #Input:>10
-    #Expected Output: Error: This is not a regular polygon
+    #Expected Output: Error
+    #Input: >10
+    #Expected Output: Error
 
     user_input = raw_input('Enter the number of sides of a regular polygon and we will name that shape:')
 
