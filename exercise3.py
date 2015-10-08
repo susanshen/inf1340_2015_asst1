@@ -13,62 +13,86 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 
-def diagnose_car(user_input):
+def diagnose_car():
     """
     Interactively queries the user with yes/no questions to identify a
     possible issue with a car.
 
-    Inputs:
+    Inputs: y or n
 
-    Expected Outputs:
+    Expected Outputs: Display proceeding diagnosis until final solution is provided
 
-    Errors:
+    Errors: Any other entry besides y and n will result in an error
 
+    Test Case:
+    #Input:y
+    #Expected Output: Display Are the battery terminals corroded? (y/n):
+    #Input:yy
+    #Expected Output: Display Clean terminals and try starting again.
+    #Input:yn
+    #Expected Output: Display Replace cables and try again.
+    #Input:n
+    #Expected Output: Display Does the car make a clicking noise? (y/n):
+    #Input:ny
+    #Expected Output: DisplayReplace the battery
+    #Input:nn
+    #Expected Output: Display Does the car crank up but fail to start? (yes/no):
+    #Input:nny
+    #Expected Output: Display Check spark plug connections.
+    #Input:nnn
+    #Expected Output: Display Does the engine start and then die? (y/n):
+    #Input:nnny
+    #Expected Output: Display Does your car have fuel injection? (y/n):
+    #Input:nnnyn
+    #Expected Output: Display Check to ensure the choke is opening and closing.
+    #Input:nnnyy
+    #Expected Output: Display Get it in for service.
+    #Input:nnnn
+    #Expected Output: Display Engine is not getting enough fuel. Clean fuel pump.
+    #Input: Anything other than y and n
+    #Expected Output: Display Error: This answer is invalid. Only answer y or n.
     """
 
 
-#Code written by Deanna Wong and Shu Yun (Susan) Shen
+    user_input = raw_input('Is the car silent when you turn the key? (Y/N):')
 
-#Input: A question to request user's input with y or n entry, any other entry will result in an error.
-#Expected Output: Display proceeding diagnosis until final solution is provided
-user_input = raw_input('Is the car silent when you turn the key? (y/n):')
+    if user_input == "Y":
+        user_input = raw_input('Are the battery terminals corroded? (Y/N):')
 
-#Input: y
-#Expected Output: Are the battery terminals corroded? (y/n):
-if user_input == "y":
-    user_input = raw_input('Are the battery terminals corroded? (y/n):')
+        if user_input == "Y":
+            print('Clean terminals and try starting again.')
 
-    if user_input == "y":
-        print('Clean terminals and start again.')
-    elif user_input == "n":
-        print('Replace cables and try again.')
+        elif user_input == "N":
+            print('Replace cables and try again.')
 
-elif user_input == "n":
-    user_input = raw_input('Does the car make a clicking noise? (y/n):')
+    elif user_input == "N":
+        user_input = raw_input('Does the car make a clicking noise? (Y/N):')
 
-    if user_input == "y":
-        print('Replace the battery')
-    elif user_input == "n":
-        user_input = raw_input('Does the car crank up but fail to start? (yes/no):')
+        if user_input == "Y":
+            print('Replace the battery.')
 
-    if user_input == "y":
-        print('Check spark plug connections.')
+        elif user_input == "N":
+            user_input = raw_input('Does the car crank up but fail to start? (Y/N):')
 
-    elif user_input == "n":
-        user_input = raw_input('Does the engine start and then die? (y/n):')
+            if user_input == "Y":
+                print('Check spark plug connections.')
 
-        if user_input == "y":
-            user_input = raw_input('Does your car have fuel injection? (y/n):')
+            elif user_input == "N":
+                user_input = raw_input('Does the engine start and then die? (Y/N):')
 
-            if user_input == "y":
-                print('Check to ensure the choke is opening and closing.')
-            elif user_input == "n":
-                print('Get it in for service.')
+                if user_input == "Y":
+                    user_input = raw_input('Does your car have fuel injection? (Y/N):')
 
-        elif user_input == "n":
-            print('Engine is not getting enough fuel. Clean fuel pump.')
+                    if user_input == "N":
+                        print('Check to ensure the choke is opening and closing.')
 
-else:
-    print('Error: This answer is invalid. Only answer y or n.')
+                    elif user_input == "Y":
+                        print('Get it in for service.')
 
-diagnose_car(user_input)
+                elif user_input == "N":
+                    print('Engine is not getting enough fuel. Clean fuel pump.')
+
+        else:
+            print('Error: This answer is invalid. Only answer Y or N.')
+
+#diagnose_car()
