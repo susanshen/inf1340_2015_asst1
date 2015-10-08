@@ -64,9 +64,8 @@ def name_that_shape():
         print('nonagon')
     elif user_input == "10":
         print('decagon')
-    elif user_input > "10":
-        print('Error')
-    elif user_input < "3":
+
+    else:
         print('Error')
 
 #name_that_shape()

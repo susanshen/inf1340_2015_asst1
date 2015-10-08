@@ -51,7 +51,7 @@ def diagnose_car():
     #Expected Output: Display Engine is not getting enough fuel. Clean fuel pump.
     #Input: Anything other than Y and N
     #Expected Output: Display Error: This answer is invalid. Only answer Y or N.
-    
+
     """
 
 
